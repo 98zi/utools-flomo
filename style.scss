@@ -1,0 +1,53 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0 20px;
+}
+
+.inputs {
+  width: 100%;
+
+  .vs-input-content {
+    width: 100%;
+
+    .vs-input {
+      width: 100%;
+    }
+  }
+}
+
+.textarea {
+  border: 2px solid transparent;
+  background: rgba(var(--vs-gray-2), 1);
+  color: rgba(var(--vs-text), 1);
+  border-radius: 10px;
+  -webkit-transition: all .25s ease;
+  transition: all .25s ease;
+  width: 100%;
+  font-family: inherit;
+  font-size: 14px;
+  min-height: 100px;
+  padding: 7px 13px 7px 10px;
+  margin: 20px 0;
+  outline: none;
+
+  &:focus {
+    border-color: #eee;
+  }
+}
+
+.vs-button__content {
+  font-size: 14px;
+  padding: 10px 20px;
+}
+
+.setting {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  cursor: pointer;
+}

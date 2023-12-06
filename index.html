@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link href="https://unpkg.com/vuesax@4.0.1-alpha.16/dist/vuesax.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <div id="app">
+
+    <template>
+      <div class="setting" @click="active=!active"><svg xmlns="http://www.w3.org/2000/svg"
+          class="icon icon-tabler icon-tabler-settings-2" width="24" height="24" viewBox="0 0 24 24" stroke-width="2"
+          stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path
+            d="M19.875 6.27a2.225 2.225 0 0 1 1.125 1.948v7.284c0 .809 -.443 1.555 -1.158 1.948l-6.75 4.27a2.269 2.269 0 0 1 -2.184 0l-6.75 -4.27a2.225 2.225 0 0 1 -1.158 -1.948v-7.285c0 -.809 .443 -1.554 1.158 -1.947l6.75 -3.98a2.33 2.33 0 0 1 2.25 0l6.75 3.98h-.033z" />
+          <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+        </svg></div>
+      
+
+      <template>
+        <div class="center">
+          <vs-dialog prevent-close v-model="active">
+            <template #header>
+              <h4 class="not-margin">flomo API</h4>
+            </template>
+
+            <div class="inputs">
+              <vs-input v-model="api" />
+            </div>
+
+            <template #footer>
+              <div class="footer-dialog">
+                <vs-button block @click="save">保存</vs-button>
+                <vs-button block danger @click="clear">注销</vs-button>
+              </div>
+            </template>
+          </vs-dialog>
+        </div>
+      </template>
+    </template>
+
+    <textarea class="textarea" v-model="textarea"></textarea>
+    <vs-button gradient @click="send">发送至 flomo</vs-button>
+
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+  <script src="https://unpkg.com/vuesax@4.0.1-alpha.16/dist/vuesax.min.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="./main.js"></script>
+</body>
+
+</html>
